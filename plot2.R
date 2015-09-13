@@ -2,12 +2,12 @@
 #Goal is to make plot of Global Activw Power (kilowats) in time during 01/02/207 and 02/01/2007
 
 #reading data file
-householdPC <- household_power_consumption <- read.table("household_power_consumption.txt", 
-                                                         header = TRUE,
-                                                         dec = ".",
-                                                         na.strings = "?",
-                                                         stringsAsFactors = FALSE,
-                                                         sep=";")
+householdPC <- read.table("household_power_consumption.txt", 
+                          header = TRUE,
+                          dec = ".",
+                          na.strings = "?",
+                          stringsAsFactors = FALSE,
+                          sep=";")
 
 #selecting relevant data and making proper formats
 plotingData <- householdPC[householdPC$Date == "1/2/2007" | householdPC$Date == "2/2/2007", ]
